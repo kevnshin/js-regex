@@ -57,7 +57,7 @@ describe('emails', function() {
     result.should.deep.equal(['test@test.com', 'test1@test.com']);
   });
 
-  it('does not match using @ as shorthand', function() {
+  it('does not match using @ as shorthand for the word "at"', function() {
     var result = contactExercise.findEmails('Meet me @ Waikiki');
     result.should.deep.equal([]);
   });
@@ -80,8 +80,10 @@ describe('phone numbers', function() {
   });
 
   // CHALLENGE
+
   it('fetches a phone number with the area code in parens', function() {
     var result = contactExercise.findPhoneNumbers('My number is (808) 555-1234');
     result.should.deep.equal(['(808) 555-1234'])
   });
+
 });
