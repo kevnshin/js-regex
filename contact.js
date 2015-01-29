@@ -15,6 +15,7 @@ module.exports = {
    * @return {[String]]} an array of phone numbers.
    */
   findPhoneNumbers: function(phrase) {
+    return phrase.match(/([0-9]{10})|([0-9]{3}-[0-9]{3}-[0-9]{4})/g);
   }
 
 };
